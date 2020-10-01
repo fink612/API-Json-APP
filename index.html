@@ -1,24 +1,51 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title></title>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    <script type="text/javascript" src="script.js"></script>
   </head>
   <body>
-    <main>
-      <h1>GitHub repo search</h1>
-      <form>
-        <label for="search">Enter Username:</label>
-        <input type="text" id="search" name="search" required>
-        <br>
-        <input type="submit">
-      </form>
-      <div id="results">
+    <h2 style="text-align: center">Github Profile Card</h2>
+    <div class="inputandbtn">
+      <input type="text" name="search" placeholder="UserName.." id="myInput" />
+      <button class="Search-btn" type="button" onclick="getInputValue();">
+        Search
+      </button>
+    </div>
+    <div class="card">
+      <img
+        id="urlimg"
+        src="https://www.udchalo.com/assets/icons/loggedInUser.png"
+        alt="John"/>
+      <h3 class="mypanel-type">User Type</h3>
+
+      <h1 class="mypanel-name">Name</h1>
+      <p class="mypanel-bio">Bio</p>
+      <h3 class="mypanel-location">Location</h3>
+      <div class="stats">
+        <div class="st1">
+          <h2 class="num-follower">0</h2>
+          <h3>Followers</h3>
+        </div>
+        <div class="st1">
+          <h2 class="num-following">0</h2>
+          <h3>Followings</h3>
+        </div>
       </div>
-    </main>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="script.js"></script>
+
+      <p>
+        <a id="btn2navigate"
+          href="https://github.com/jay078"
+          class="btnforgithub">Github</a>
+      </p>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
